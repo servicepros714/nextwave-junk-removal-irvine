@@ -1,0 +1,42 @@
+.bar {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 60;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    background: var(--ink);
+    border-top: 3px solid var(--wax);
+  }
+  .call,
+  .estimate {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 50px;
+    border-radius: 999px;
+    font-family: var(--font-cond);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .call {
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .estimate {
+    background: var(--wax);
+    color: var(--ink);
+  }
+}

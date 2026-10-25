@@ -1,0 +1,131 @@
+.footer {
+  background: var(--paper);
+}
+
+.wave {
+  margin-bottom: -1px;
+}
+
+.body {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 48px 0 28px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.2fr 1.2fr;
+  gap: 40px;
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logoPlate {
+  background: var(--paper);
+  border-radius: 14px;
+  padding: 10px 14px;
+  align-self: flex-start;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 132px;
+  height: 96px;
+  aspect-ratio: 624 / 454;
+  object-fit: contain;
+  align-self: flex-start;
+  flex-shrink: 0;
+}
+
+.blurb {
+  color: rgba(244, 239, 228, 0.72);
+  font-size: 15px;
+  margin: 18px 0 0;
+  max-width: 300px;
+}
+
+.colTitle {
+  font-family: var(--font-cond);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--wax);
+  margin-bottom: 14px;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  font-size: 15px;
+  color: rgba(244, 239, 228, 0.82);
+}
+
+.list a {
+  text-decoration: none;
+}
+
+.list a:hover {
+  color: var(--wax);
+}
+
+.contact li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact svg {
+  color: var(--wax);
+  flex-shrink: 0;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(244, 239, 228, 0.16);
+  font-size: 13px;
+  color: rgba(244, 239, 228, 0.6);
+  font-family: var(--font-cond);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .body {
+    padding: 36px 0 22px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .list {
+    gap: 4px;
+    line-height: 1.4;
+  }
+  .colTitle {
+    margin-bottom: 8px;
+  }
+  .bottom {
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 26px;
+  }
+}

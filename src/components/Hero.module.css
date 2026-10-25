@@ -1,0 +1,225 @@
+.hero {
+  position: relative;
+  background: var(--ink);
+  color: var(--paper);
+  overflow: hidden;
+}
+
+/* Engraved swell lines, echoing the emblem's woodcut wave */
+.lines {
+  position: absolute;
+  inset: 0;
+  opacity: 0.09;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='36' viewBox='0 0 240 36'%3E%3Cpath d='M0 18c20-10 40-10 60 0s40 10 60 0 40-10 60 0 40 10 60 0' fill='none' stroke='%23f4efe4' stroke-width='2'/%3E%3C/svg%3E");
+  background-size: 240px 36px;
+  mask-image: linear-gradient(100deg, transparent 0%, #000 45%, #000 100%);
+  -webkit-mask-image: linear-gradient(100deg, transparent 0%, #000 45%, #000 100%);
+}
+
+.inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 48px;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.eyebrow {
+  font-family: var(--font-cond);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--wax);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: clamp(44px, 6.4vw, 82px);
+  line-height: 0.98;
+  margin-top: 18px;
+}
+
+.kicker {
+  display: block;
+  font-family: var(--font-cond);
+  font-weight: 700;
+  font-size: clamp(20px, 2.2vw, 26px);
+  letter-spacing: 0.16em;
+  color: var(--foam);
+  margin-bottom: 12px;
+}
+
+.accent {
+  display: block;
+  color: var(--paper);
+  -webkit-text-stroke: 0;
+  background: linear-gradient(transparent 62%, var(--pacific) 62%, var(--pacific) 92%, transparent 92%);
+  width: fit-content;
+  padding-right: 6px;
+}
+
+.lead {
+  font-size: 19px;
+  color: rgba(244, 239, 228, 0.82);
+  max-width: 540px;
+  margin: 24px 0 0;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.ctas :global(.btnWax) {
+  box-shadow: 4px 4px 0 var(--pacific);
+  border-color: var(--wax);
+}
+
+.ctas :global(.btnWax):hover {
+  box-shadow: 6px 6px 0 var(--pacific);
+}
+
+.chips {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  font-family: var(--font-cond);
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.chips li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chipCheck {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--wax);
+  color: var(--ink);
+}
+
+.visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.plate {
+  position: relative;
+  background: var(--paper);
+  border-radius: 28px;
+  padding: 28px 30px;
+  transform: rotate(-2.5deg);
+  box-shadow: 10px 10px 0 var(--pacific);
+  outline: 2px solid var(--paper);
+  outline-offset: 8px;
+}
+
+.emblem {
+  width: 440px;
+  height: 320px;
+  max-width: 100%;
+  aspect-ratio: 624 / 454;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.stamp {
+  position: absolute;
+  right: -6px;
+  bottom: -26px;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  background: var(--wax);
+  color: var(--ink);
+  border: 3px dashed var(--ink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(10deg);
+  font-family: var(--font-cond);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.1;
+  font-size: 14px;
+  box-shadow: 0 0 0 6px var(--ink);
+}
+
+.stamp strong {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  margin: 2px 0;
+}
+
+.wave {
+  position: relative;
+  margin-bottom: -1px;
+}
+
+@media (max-width: 960px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 56px;
+    padding-top: 48px;
+    padding-bottom: 56px;
+  }
+  .emblem {
+    width: 360px;
+    height: 262px;
+  }
+}
+
+@media (max-width: 560px) {
+  .eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.14em;
+  }
+  .lead {
+    font-size: 17px;
+  }
+  .ctas :global(.btn) {
+    width: 100%;
+  }
+  .plate {
+    padding: 16px 18px;
+    border-radius: 20px;
+  }
+  .emblem {
+    width: 270px;
+    height: 196px;
+  }
+  .stamp {
+    width: 96px;
+    height: 96px;
+    font-size: 11px;
+    right: -4px;
+    bottom: -22px;
+  }
+  .stamp strong {
+    font-size: 12px;
+  }
+}
